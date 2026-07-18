@@ -69,6 +69,14 @@ export default function Navbar({ active, onNavigate }) {
               {s.charAt(0).toUpperCase() + s.slice(1)}
             </a>
           ))}
+          <a
+            href="https://github.com/Anubhav9415"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+          >
+            GitHub
+          </a>
         </div>
 
         {/* Hamburger (visible on small screens via CSS if needed) */}
@@ -109,6 +117,16 @@ export default function Navbar({ active, onNavigate }) {
               {s.charAt(0).toUpperCase() + s.slice(1)}
             </a>
           ))}
+          <a
+            href="https://github.com/Anubhav9415"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+            style={{ fontSize: 16 }}
+            onClick={() => setMenuOpen(false)}
+          >
+            GitHub
+          </a>
         </div>
       )}
     </nav>

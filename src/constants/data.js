@@ -9,7 +9,7 @@ export const COLORS = {
   glow: "0 0 20px rgba(0,212,255,0.3)",
 };
 
-export const NAV_SECTIONS = ["home", "about", "skills", "projects", "experience", "contact"];
+export const NAV_SECTIONS = ["home", "about", "skills", "services", "projects", "experience", "contact"];
 
 export const SKILLS = [
   { name: "JavaScript",    level: 85, color: "#f7df1e" },
@@ -94,4 +94,65 @@ export const TYPEWRITER_WORDS = [
   "AWS Certified",
   "Problem Solver",
   "CS Undergrad",
+];
+
+export const SERVICES = [
+  {
+    id: "ai",
+    title: "AI & LLM Integration",
+    desc: "Building RAG systems and AI agents using Groq, OpenAI, and Vector databases to automate complex business logic.",
+    icon: "Bot",
+    color: "#00d4ff",
+    glow: "0 0 15px rgba(0, 212, 255, 0.25)",
+    desktopWidth: "58%",
+  },
+  {
+    id: "browser",
+    title: "Browser Extensions",
+    desc: "Specialized in WhatsApp automation and productivity tools using the Plasmo framework and Chrome APIs.",
+    icon: "LayoutGrid",
+    color: "#a855f7",
+    glow: "0 0 15px rgba(168, 85, 247, 0.25)",
+    desktopWidth: "38%",
+  },
+  {
+    id: "mobile",
+    title: "Mobile Development",
+    desc: "Developing cross-platform mobile experiences using React Native and Expo for high-performance iOS and Android apps.",
+    icon: "Smartphone",
+    color: "#3b82f6",
+    glow: "0 0 15px rgba(59, 130, 246, 0.25)",
+    desktopWidth: "38%",
+  },
+  {
+    id: "web",
+    title: "Full-Stack Web",
+    desc: "Crafting scalable SEO-optimized platforms with Next.js 16, focusing on speed and modern architecture.",
+    icon: "Globe",
+    color: "#10b981",
+    glow: "0 0 15px rgba(16, 185, 129, 0.25)",
+    desktopWidth: "58%",
+  },
+  {
+    id: "desktop",
+    title: "Desktop & Automation",
+    desc: "Custom Python-based desktop tools and automation scripts to streamline repetitive professional tasks.",
+    icon: "Cpu",
+    color: "#f59e0b",
+    glow: "0 0 15px rgba(245, 158, 11, 0.25)",
+    desktopWidth: "58%",
+  },
+  {
+    id: "devops",
+    title: "IT Support & DevOps",
+    desc: "Infrastructure setup, SEO optimization, and professional IT support for software deployments.",
+    icon: "Code",
+    color: "#ec4899",
+    glow: "0 0 15px rgba(236, 72, 153, 0.25)",
+    desktopWidth: "38%",
+  },
+];
+
+export const SERVICES_TECH = [
+  "Next.js", "React Native", "Expo", "FastAPI", "Python", "Groq", "PostgreSQL", "Firebase", "Plasmo"
 ];
