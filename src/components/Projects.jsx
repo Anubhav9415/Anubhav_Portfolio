@@ -1,7 +1,8 @@
-import { MonitorSmartphone, FileText, Smartphone, Receipt, Leaf, Play, Brain, BarChart3, ExternalLink, Github } from "lucide-react";
+import { MonitorSmartphone, FileText, Smartphone, Receipt, Leaf, Play, Brain, BarChart3, ExternalLink, Github, ShoppingCart } from "lucide-react";
 import RevealBox from "./RevealBox";
 import { PROJECTS } from "../constants/data";
 import imgSensai from "../assets/Sensai.png";
+import imgSriscart from "../assets/SrisCart.svg";
 import imgInsta from "../assets/Insta_Analyzer.png";
 import imgFindit from "../assets/project-findit.png";
 import imgInvoice from "../assets/project-invoice.jpg";
@@ -10,6 +11,7 @@ import imgNetflix from "../assets/Netflix_Clone.png";
 
 const ICONS = [
   <Brain size={22}/>,
+  <ShoppingCart size={22}/>,
   <BarChart3 size={22}/>,
   <MonitorSmartphone size={22}/>,
   <FileText size={22}/>,
@@ -17,7 +19,7 @@ const ICONS = [
   <Play size={22}/>,
 ];
 
-const PROJECT_IMAGES = [imgSensai, imgInsta, imgFindit, imgInvoice, imgAgribot, imgNetflix];
+const PROJECT_IMAGES = [imgSensai, imgSriscart, imgInsta, imgFindit, imgInvoice, imgAgribot, imgNetflix];
 
 // Fallback CSS banners for each project
 const BANNERS = [
@@ -28,6 +30,14 @@ const BANNERS = [
     previewIcon: <Brain size={48} strokeWidth={1}/>,
     previewColor: "#a855f7",
     label: "AI Platform",
+  },
+  {
+    bg: "linear-gradient(135deg, #022c22 0%, #065f46 50%, #020617 100%)",
+    gridColor: "rgba(16,185,129,0.12)",
+    glowColor: "#10b981",
+    previewIcon: <ShoppingCart size={48} strokeWidth={1}/>,
+    previewColor: "#10b981",
+    label: "Delivery Platform",
   },
   {
     bg: "linear-gradient(135deg, #2d0a1e 0%, #831843 50%, #1a0a2e 100%)",
@@ -55,10 +65,10 @@ const BANNERS = [
   },
   {
     bg: "linear-gradient(135deg, #022c22 0%, #065f46 50%, #020617 100%)",
-    gridColor: "rgba(16,185,129,0.1)",
-    glowColor: "#10b981",
+    gridColor: "rgba(34,197,94,0.1)",
+    glowColor: "#22c55e",
     previewIcon: <Leaf size={48} strokeWidth={1}/>,
-    previewColor: "#10b981",
+    previewColor: "#22c55e",
     label: "Web App",
   },
   {
@@ -74,6 +84,7 @@ const BANNERS = [
 // Per-project image display settings — controls how each banner image fits
 const BANNER_IMAGE_STYLES = [
   { objectFit: "cover",   objectPosition: "center", padding: 0,  bg: "#050c16" },  // Sensai
+  { objectFit: "cover",   objectPosition: "center", padding: 0,  bg: "#020d0a" },  // SrisCart
   { objectFit: "cover",   objectPosition: "center", padding: 0,  bg: "#050c16" },  // Instagram
   { objectFit: "contain", objectPosition: "center", padding: 16, bg: "#12002e" },  // FindIT — square logo, needs contain + purple bg
   { objectFit: "contain", objectPosition: "center", padding: 16, bg: "#0f1538" },  // Invoice — tall logo, needs contain + dark blue bg
@@ -83,12 +94,20 @@ const BANNER_IMAGE_STYLES = [
 
 function ProjectBanner({ banner, period, color, image, index }) {
   const imgStyle = BANNER_IMAGE_STYLES[index] || BANNER_IMAGE_STYLES[0];
+  const safeBanner = banner || {
+    bg: "linear-gradient(135deg, #022c22 0%, #065f46 50%, #020617 100%)",
+    gridColor: "rgba(16,185,129,0.12)",
+    glowColor: color || "#10b981",
+    previewIcon: null,
+    previewColor: color || "#10b981",
+    label: "Web App",
+  };
 
   return (
     <div style={{
       position: "relative",
       height: 220,
-      background: image ? imgStyle.bg : banner.bg,
+      background: image ? imgStyle.bg : safeBanner.bg,
       overflow: "hidden",
     }}>
       {/* Actual image element for precise object-fit control */}
@@ -112,7 +131,7 @@ function ProjectBanner({ banner, period, color, image, index }) {
       <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%", opacity:0.4 }}>
         <defs>
           <pattern id={`grid-${index}`} width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke={banner.gridColor} strokeWidth="1"/>
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke={safeBanner.gridColor} strokeWidth="1"/>
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill={`url(#grid-${index})`}/>
@@ -122,13 +141,13 @@ function ProjectBanner({ banner, period, color, image, index }) {
       <div style={{
         position:"absolute", top:"30%", left:"30%",
         width:120, height:120, borderRadius:"50%",
-        background:`radial-gradient(circle, ${banner.glowColor}44 0%, transparent 70%)`,
+        background:`radial-gradient(circle, ${safeBanner.glowColor}44 0%, transparent 70%)`,
         filter:"blur(20px)",
       }}/>
       <div style={{
         position:"absolute", bottom:"-10%", right:"20%",
         width:80, height:80, borderRadius:"50%",
-        background:`radial-gradient(circle, ${banner.glowColor}22 0%, transparent 70%)`,
+        background:`radial-gradient(circle, ${safeBanner.glowColor}22 0%, transparent 70%)`,
         filter:"blur(15px)",
       }}/>
 
@@ -141,20 +160,20 @@ function ProjectBanner({ banner, period, color, image, index }) {
         }}>
           <div style={{
             width:72, height:72, borderRadius:18,
-            background:`${banner.glowColor}18`,
-            border:`1px solid ${banner.glowColor}44`,
+            background:`${safeBanner.glowColor}18`,
+            border:`1px solid ${safeBanner.glowColor}44`,
             display:"flex", alignItems:"center", justifyContent:"center",
-            color: banner.previewColor,
-            boxShadow:`0 0 30px ${banner.glowColor}33`,
+            color: safeBanner.previewColor,
+            boxShadow:`0 0 30px ${safeBanner.glowColor}33`,
           }}>
-            {banner.previewIcon}
+            {safeBanner.previewIcon}
           </div>
           <span style={{
             fontSize:11, fontWeight:600, letterSpacing:"0.18em",
-            color:`${banner.previewColor}99`,
+            color:`${safeBanner.previewColor}99`,
             textTransform:"uppercase",
           }}>
-            {banner.label}
+            {safeBanner.label}
           </span>
         </div>
       )}
@@ -181,7 +200,7 @@ function ProjectBanner({ banner, period, color, image, index }) {
       <div style={{
         position:"absolute", bottom:0, left:0, right:0,
         height:2,
-        background:`linear-gradient(90deg, transparent, ${banner.glowColor}, transparent)`,
+        background:`linear-gradient(90deg, transparent, ${safeBanner.glowColor}, transparent)`,
       }}/>
     </div>
   );
@@ -316,17 +335,9 @@ export default function Projects() {
           </div>
         </RevealBox>
 
-        {/* Featured Row — 2 new projects, larger cards */}
         <div className="projects-grid">
-          {PROJECTS.slice(0, 2).map((p, i) => (
+          {PROJECTS.map((p, i) => (
             <ProjectCard key={p.title} project={p} icon={ICONS[i]} index={i} image={PROJECT_IMAGES[i]} />
-          ))}
-        </div>
-
-        {/* Remaining projects — 2x2 grid */}
-        <div className="projects-grid">
-          {PROJECTS.slice(2).map((p, i) => (
-            <ProjectCard key={p.title} project={p} icon={ICONS[i+2]} index={i+2} image={PROJECT_IMAGES[i+2]} />
           ))}
         </div>
 

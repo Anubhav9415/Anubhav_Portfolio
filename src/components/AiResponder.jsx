@@ -86,9 +86,9 @@ General Guidelines:
         reply: "Hello! I am Anubhav's AI Assistant. 🤖\n\nI can tell you all about his projects, skills, education, certifications, and how to contact him. What would you like to know?"
       },
       projects: {
-        keywords: ["project", "projects", "work", "apps", "sensai", "instagram", "insta", "reach analyzer", "findit", "lost", "found", "invoice", "netflix", "agribot", "portfolio"],
+        keywords: ["project", "projects", "work", "apps", "sensai", "sriscart", "sris", "cart", "delivery", "grocery", "store", "instagram", "insta", "reach analyzer", "findit", "lost", "found", "invoice", "netflix", "agribot", "portfolio"],
         score: 0,
-        reply: "Here are some of Anubhav's key projects:\n\n• **Sensai – AI Career Coach (2026)**: Smart resume builder, mock interviews, and cover letter generator using Gemini API. [Live Demo](https://sensai-main-phi.vercel.app/) | [GitHub](https://github.com/Anubhav9415/SENSAI-MAIN)\n• **Instagram Reach Analyzer (2026)**: Data-driven engagement analytics dashboard. [Live Demo](https://insta-audience-analyser.vercel.app/) | [GitHub](https://github.com/Anubhav9415/INSTA_AUDIENCE_ANALYSER)\n• **FINDIT – Lost & Found App**: Cross-platform React Native (Expo) app connected to Firebase Firestore.\n• **Invoice Generator**: React & Node.js dynamic billing dashboard with email automation.\n• **Agribot**: Web application tailored for crop assistance and farming solutions.\n\nScroll to the **Projects** section of the portfolio to see live links and full specifications!"
+        reply: "Here are some of Anubhav's key projects:\n\n• **Sensai – AI Career Coach (2026)**: Smart resume builder, mock interviews, and cover letter generator using Gemini API. [Live Demo](https://sensai-main-phi.vercel.app/) | [GitHub](https://github.com/Anubhav9415/SENSAI-MAIN)\n• **SrisCart – Grocery & Store Delivery (2026)**: Full-stack multi-vendor delivery platform with real-time Leaflet & OSM tracking, transit simulation, and 50 km boundary checks. [Live Demo](https://sriscart.live/) | [GitHub](https://github.com/Anubhav9415/sris-cart)\n• **Instagram Reach Analyzer (2026)**: Data-driven engagement analytics dashboard. [Live Demo](https://insta-audience-analyser.vercel.app/) | [GitHub](https://github.com/Anubhav9415/INSTA_AUDIENCE_ANALYSER)\n• **FINDIT – Lost & Found App**: Cross-platform React Native (Expo) app connected to Firebase Firestore.\n• **Invoice Generator**: React & Node.js dynamic billing dashboard with email automation.\n• **Agribot**: Web application tailored for crop assistance and farming solutions.\n\nScroll to the **Projects** section of the portfolio to see live links and full specifications!"
       },
       skills: {
         keywords: ["skills", "skill", "technologies", "tech", "stack", "languages", "javascript", "react", "node", "cpp", "c++", "firebase", "mongodb", "mysql", "html", "css", "native"],
@@ -139,7 +139,7 @@ General Guidelines:
       return categories[bestMatch].reply;
     }
 
-    return "I am currently running in **Local Simulation Mode**. I can answer questions about Anubhav's:\n• **Projects** (Sensai, Insta Reach Analyzer, FINDIT)\n• **Skills** (React, React Native, Node.js, C++)\n• **Certifications** (AWS Solutions Architect, AI Practitioner)\n• **Contact info** (Email, LinkedIn, Phone)\n• **Education** (Parul University B.Tech CSE)\n\n*Tip: Click the gear icon (⚙️) at the top right to paste a **Gemini API Key** and unlock full conversational AI chat!*";
+    return "I am currently running in **Local Simulation Mode**. I can answer questions about Anubhav's:\n• **Projects** (Sensai, SrisCart, Insta Reach Analyzer, FINDIT)\n• **Skills** (React, React Native, Node.js, C++)\n• **Certifications** (AWS Solutions Architect, AI Practitioner)\n• **Contact info** (Email, LinkedIn, Phone)\n• **Education** (Parul University B.Tech CSE)\n\n*Tip: Click the gear icon (⚙️) at the top right to paste a **Gemini API Key** and unlock full conversational AI chat!*";
   };
 
   // Process and send message

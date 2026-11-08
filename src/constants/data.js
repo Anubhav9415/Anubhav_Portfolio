@@ -35,6 +35,15 @@ export const PROJECTS = [
     github: "https://github.com/Anubhav9415/SENSAI-MAIN",
   },
   {
+    title: "SrisCart – Grocery & Store Delivery",
+    period: "2026",
+    desc: "A full-stack multi-vendor delivery platform featuring real-time Leaflet & OSM driver tracking, buyer/seller/rider/admin control panels, dynamic transit simulation, 50 km zone validation, and dual-token JWT auth.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Leaflet", "Redux Toolkit"],
+    color: "#10b981",
+    liveDemo: "https://sriscart.live/",
+    github: "https://github.com/Anubhav9415/sris-cart",
+  },
+  {
     title: "Instagram Reach Analyzer",
     period: "2026",
     desc: "A data-driven analytics dashboard that visualizes Instagram engagement metrics, audience demographics, reach trends, and content performance — helping creators optimize their social media strategy.",
@@ -62,7 +71,7 @@ export const PROJECTS = [
     period: "2026",
     desc: "A web application designed for agricultural use-cases, providing solutions and assistance for farming.",
     tags: ["JavaScript", "Web App"],
-    color: "#10b981",
+    color: "#22c55e",
   },
   {
     title: "Netflix Clone",

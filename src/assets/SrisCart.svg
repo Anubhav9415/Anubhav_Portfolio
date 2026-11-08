@@ -1,0 +1,182 @@
+<svg width="800" height="440" viewBox="0 0 800 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="sc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031610"/>
+      <stop offset="45%" stop-color="#06291e"/>
+      <stop offset="85%" stop-color="#041a14"/>
+      <stop offset="100%" stop-color="#020d0a"/>
+    </linearGradient>
+
+    <!-- Green Glow Gradient -->
+    <radialGradient id="sc-glow1" cx="30%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#10b981" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sc-glow2" cx="75%" cy="65%" r="45%">
+      <stop offset="0%" stop-color="#00d4aa" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#059669" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="sc-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#10b981" stroke-width="0.7" stroke-opacity="0.12"/>
+      <circle cx="0" cy="0" r="1.2" fill="#10b981" fill-opacity="0.25"/>
+    </pattern>
+
+    <!-- Linear Accent for Route -->
+    <linearGradient id="sc-route-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#4FBF8B"/>
+    </linearGradient>
+
+    <!-- Badge Gradient -->
+    <linearGradient id="sc-badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Glass Card Gradient -->
+    <linearGradient id="sc-card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d2e24" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#061c16" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Shadow Filter -->
+    <filter id="sc-shadow" x="-10%" y="-10%" width="120%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="sc-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="440" fill="url(#sc-bg)"/>
+
+  <!-- Radial Glow Orbs -->
+  <rect width="800" height="440" fill="url(#sc-glow1)"/>
+  <rect width="800" height="440" fill="url(#sc-glow2)"/>
+
+  <!-- Grid overlay -->
+  <rect width="800" height="440" fill="url(#sc-grid)"/>
+
+  <!-- Delivery Radius Wave Rings (Vadodara Store Zone) -->
+  <circle cx="620" cy="220" r="140" fill="none" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+  <circle cx="620" cy="220" r="100" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.25"/>
+  <circle cx="620" cy="220" r="60" fill="#10b981" fill-opacity="0.04" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="620" cy="220" r="22" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/>
+  <circle cx="620" cy="220" r="7" fill="#10b981"/>
+
+  <!-- Radius Label -->
+  <text x="620" y="258" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#10b981" fill-opacity="0.8" text-anchor="middle" letter-spacing="0.08em">50 KM STORE HUB</text>
+
+  <!-- Route Line Simulation -->
+  <path d="M 430 310 C 470 280, 520 330, 560 260 S 590 235, 620 220" fill="none" stroke="url(#sc-route-grad)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  
+  <!-- Rider Waypoint -->
+  <circle cx="490" cy="295" r="5" fill="#00d4ff" filter="url(#sc-glow-filter)"/>
+  <text x="490" y="322" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#00d4ff" text-anchor="middle">RIDER #1</text>
+
+  <!-- Left Main Showcase Card -->
+  <g transform="translate(60, 65)" filter="url(#sc-shadow)">
+    <!-- Card Frame -->
+    <rect width="360" height="310" rx="20" fill="url(#sc-card-grad)" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.3"/>
+    
+    <!-- Top Status Bar -->
+    <rect x="0" y="0" width="360" height="42" rx="20" fill="#10b981" fill-opacity="0.08"/>
+    <line x1="0" y1="42" x2="360" y2="42" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.2"/>
+    
+    <!-- Status Dot & Label -->
+    <circle cx="26" cy="21" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="38" y="25" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#10b981" letter-spacing="0.1em">LIVE DELIVERY NETWORK</text>
+
+    <!-- Lat/Long badge -->
+    <rect x="238" y="11" width="102" height="20" rx="6" fill="#000" fill-opacity="0.4" stroke="#10b981" stroke-width="0.6" stroke-opacity="0.3"/>
+    <text x="289" y="24" font-family="'Consolas', monospace" font-size="9" font-weight="600" fill="#a7f3d0" text-anchor="middle">22.307°N, 73.181°E</text>
+
+    <!-- SrisCart Logo Icon Graphic -->
+    <g transform="translate(24, 66)">
+      <!-- Circle Icon Frame -->
+      <rect width="56" height="56" rx="14" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.4"/>
+      
+      <!-- Shopping Cart SVG Symbol -->
+      <g transform="translate(13, 14)">
+        <path d="M 0 3 L 5 3 L 9 18 L 24 18 L 27 7 L 7 7" fill="none" stroke="#4FBF8B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="11" cy="24" r="2.5" fill="#4FBF8B"/>
+        <circle cx="22" cy="24" r="2.5" fill="#4FBF8B"/>
+      </g>
+    </g>
+
+    <!-- Brand Header -->
+    <text x="94" y="94" font-family="'Syne', 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.02em">Sris<tspan fill="#4FBF8B">Cart</tspan></text>
+    <text x="94" y="114" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#94a3b8">Real-Time Delivery &amp; E-Commerce</text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(24, 145)">
+      <!-- Tag 1: Leaflet Live Tracking -->
+      <rect x="0" y="0" width="144" height="26" rx="7" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.35"/>
+      <text x="72" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle">📍 Leaflet.js Tracking</text>
+
+      <!-- Tag 2: 4 Unified Roles -->
+      <rect x="152" y="0" width="158" height="26" rx="7" fill="#00d4ff" fill-opacity="0.1" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.3"/>
+      <text x="231" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#7dd3fc" text-anchor="middle">👥 4 Control Panels</text>
+
+      <!-- Tag 3: Rider Simulation -->
+      <rect x="0" y="34" width="150" height="26" rx="7" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="0.8" stroke-opacity="0.35"/>
+      <text x="75" y="51" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#c4b5fd" text-anchor="middle">🚲 Transit Simulation</text>
+
+      <!-- Tag 4: Dual Token JWT -->
+      <rect x="158" y="34" width="152" height="26" rx="7" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+      <text x="234" y="51" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#fcd34d" text-anchor="middle">🔐 Dual-Token JWT</text>
+    </g>
+
+    <!-- Bottom Status Metrics -->
+    <line x1="24" y1="230" x2="336" y2="230" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.2"/>
+
+    <g transform="translate(24, 246)">
+      <!-- Metric 1 -->
+      <text x="0" y="12" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.08em" text-transform="uppercase">STORE ZONE</text>
+      <text x="0" y="32" font-family="'Syne', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f8fafc">50 km Range</text>
+
+      <!-- Metric 2 -->
+      <text x="120" y="12" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.08em" text-transform="uppercase">SYNC RATE</text>
+      <text x="120" y="32" font-family="'Syne', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#10b981">Live Polling</text>
+
+      <!-- Metric 3 -->
+      <text x="225" y="12" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.08em" text-transform="uppercase">DEPLOYMENT</text>
+      <text x="225" y="32" font-family="'Syne', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#00d4ff">sriscart.live</text>
+    </g>
+  </g>
+
+  <!-- Right Floating Mini-Card (Rider Status) -->
+  <g transform="translate(480, 85)" filter="url(#sc-shadow)">
+    <rect width="260" height="95" rx="14" fill="#062219" fill-opacity="0.9" stroke="#10b981" stroke-width="1" stroke-opacity="0.35"/>
+    
+    <circle cx="34" cy="38" r="18" fill="#10b981" fill-opacity="0.2"/>
+    <path d="M 26 38 L 32 44 L 42 32" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="64" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Active Delivery</text>
+    <text x="64" y="52" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#6ee7b7">Vadodara Store &gt; Buyer</text>
+    
+    <!-- Progress bar -->
+    <rect x="20" y="70" width="220" height="6" rx="3" fill="#0f3a2c"/>
+    <rect x="20" y="70" width="165" height="6" rx="3" fill="url(#sc-route-grad)"/>
+  </g>
+
+  <!-- Top Right Live Pill -->
+  <g transform="translate(630, 28)">
+    <rect width="110" height="28" rx="14" fill="#031f16" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="16" cy="14" r="4" fill="#10b981">
+      <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="28" y="18" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#a7f3d0" letter-spacing="0.05em">sriscart.live</text>
+  </g>
+</svg>
+
