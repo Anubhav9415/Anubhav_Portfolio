@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./styles/globals.css";
 
 import Navbar     from "./components/Navbar";
+import Particles  from "./components/Particles";
 import Hero       from "./components/Hero";
 import About      from "./components/About";
 import Skills     from "./components/Skills";
@@ -37,7 +38,9 @@ export default function App() {
   };
 
   return (
-    <div style={{ background: "#050c16", color: "#e2e8f0", overflowX: "hidden" }}>
+    <div style={{ background: "#050c16", color: "#e2e8f0", overflowX: "hidden", position: "relative" }}>
+      {/* 3D Warp Speed Cosmic Animation Background */}
+      <Particles />
       <Navbar active={active} onNavigate={navigateTo} />
       <Hero       onNavigate={navigateTo} />
       <About />

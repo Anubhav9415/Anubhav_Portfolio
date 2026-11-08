@@ -1,5 +1,4 @@
 import { Github, Linkedin, Mail, Phone, ArrowUpRight, ChevronDown } from "lucide-react";
-import Particles from "./Particles";
 import TypeWriter from "./TypeWriter";
 import { TYPEWRITER_WORDS } from "../constants/data";
 
@@ -23,8 +22,7 @@ export default function Hero({ onNavigate }) {
         padding: "80px 5% 0",
       }}
     >
-      {/* Background effects */}
-      <Particles />
+      {/* Background radial glow accents */}
       <div style={{ position:"absolute", top:"20%", right:"10%", width:400, height:400,
         background:"radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)", pointerEvents:"none" }}/>
       <div style={{ position:"absolute", bottom:"20%", left:"5%", width:300, height:300,
